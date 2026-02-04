@@ -3,83 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عدسة الرؤية | جولات افتراضية</title>
+    <title>عدسة الرؤية - الجولات الافتراضية</title>
     <style>
-        :root { --main-color: #000000; --bg-light: #f8f9fa; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: var(--bg-light); color: #333; }
-        
-        /* الهيدر والشعار */
-        header { background: #fff; padding: 25px; text-align: center; box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        header img { max-width: 220px; height: auto; }
-
-        /* منطقة العرض */
-        #tour-viewer { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 2000; }
-        #tour-viewer iframe { width: 100%; height: 100%; border: none; }
-        .close-tour { position: absolute; top: 20px; left: 20px; background: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; font-weight: bold; z-index: 2100; }
-
-        /* الشبكة */
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #eee; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-content { padding: 20px; text-align: center; }
-        .card-content h3 { margin: 0 0 10px; font-size: 1.2rem; }
-        .card-content p { color: #666; margin-bottom: 20px; }
-        .btn { background: var(--main-color); color: white; border: none; padding: 12px 25px; border-radius: 6px; cursor: pointer; text-decoration: none; width: 100%; display: block; font-weight: bold; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; text-align: center; }
+        header { background-color: #ffffff; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .logo { max-height: 80px; margin-bottom: 10px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; gap: 20px; }
+        .card { background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; width: 300px; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 180px; object-fit: cover; }
+        .card-content { padding: 15px; }
+        .btn { display: inline-block; background-color: #27ae60; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 10px; }
     </style>
 </head>
 <body>
 
-<img src="logo.png" alt="عدسة الرؤية" style="height: 50px; width: auto;">
-
-
-<div id="tour-viewer">
-    <button class="close-tour" onclick="closeTour()">إغلاق الجولة [X]</button>
-    <iframe id="iframe" src="" allowfullscreen allow="xr-spatial-tracking"></iframe>
-</div>
+<header>
+    <img src="logo.png" alt="عدسة الرؤية" class="logo">
+    <h1>عدسة الرؤية للجولات الافتراضية</h1>
+</header>
 
 <div class="container">
-    <div class="grid" id="tours-list">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=300&q=80" alt="مشروع 1">
+        <div class="card-content">
+            <h3>فيلا حي النرجس</h3>
+            <p>جولة افتراضية كاملة بتقنية Matterport</p>
+            <a href="https://my.matterport.com/show/?m=eTQoM3XE9NJ" target="_blank" class="btn">ابدأ الجولة</a>
         </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=300&q=80" alt="مشروع 2">
+        <div class="card-content">
+            <h3>شقة مودرن - الملقا</h3>
+            <p>استكشف التفاصيل من مكانك</p>
+            <a href="ضع_رابط_متربورت_هنا" target="_blank" class="btn">ابدأ الجولة</a>
+        </div>
+    </div>
 </div>
-
-<script>
-    // --- هنا تضع بياناتك يدوياً بكل سهولة ---
-    const myTours = [
-        { title: "اسم الموقع الأول", city: "اسم المدينة", img: "صورة1.jpg", link: "رابط_متر_بورت_هنا" },
-        { title: "اسم الموقع الثاني", city: "اسم المدينة", img: "صورة2.jpg", link: "رابط_متر_بورت_هنا" },
-        // يمكنك إضافة حتى 10 أو أكثر بنفس التنسيق
-    ];
-
-    function loadTours() {
-        const list = document.getElementById('tours-list');
-        list.innerHTML = myTours.map(t => `
-            <div class="card">
-                <img src="${t.img}">
-                <div class="card-content">
-                    <h3>${t.title}</h3>
-                    <p>${t.city}</p>
-                    <button class="btn" onclick="openTour('${t.link}')">بدء الجولة</button>
-                </div>
-            </div>
-        `).join('');
-    }
-
-    function openTour(url) {
-        document.getElementById('iframe').src = url;
-        document.getElementById('tour-viewer').style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeTour() {
-        document.getElementById('tour-viewer').style.display = 'none';
-        document.getElementById('iframe').src = '';
-        document.body.style.overflow = 'auto';
-    }
-
-    loadTours();
-</script>
 
 </body>
 </html>
