@@ -18,15 +18,14 @@
             color: #2c3e50; 
             min-height: 100vh; 
         }
-        <header>
-    <img src="logo.png" alt="عدسة الرؤية" class="logo">
-    <h1>عـدسـة الـرؤيـة</h1>
-    <p class="subtitle">تجربة عقارية تفاعلية من قلب الحدث</p>
-</header>
-
+        header { 
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 40px 20px; 
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1); 
+            border-bottom: 3px solid var(--accent-color); 
         }
         .logo { 
-            max-height: 150px; /* تم تكبير مساحة الشعار قليلاً */
+            max-height: 150px; 
             margin-bottom: 15px; 
             transition: 0.3s;
         }
@@ -80,13 +79,14 @@
             box-shadow: 0 10px 25px rgba(37,211,102,0.4); 
             transition: 0.3s; 
         }
+        .whatsapp-float:hover { transform: scale(1.1) rotate(10deg); }
         footer { padding: 40px; background: var(--primary-color); color: white; margin-top: 50px; }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="Logo.png" alt="عدسة الرؤية" class="logo" onerror="this.src='https://vision-lens.github.io/Visionss/Logo.png'">
+    <img src="logo.png" alt="عدسة الرؤية" class="logo">
     <h1>عـدسـة الـرؤيـة</h1>
     <p class="subtitle">تجربة عقارية تفاعلية من قلب الحدث</p>
 </header>
