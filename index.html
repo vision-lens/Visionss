@@ -24,19 +24,11 @@
             box-shadow: 0 4px 30px rgba(0,0,0,0.1); 
             border-bottom: 3px solid var(--accent-color); 
         }
-        /* تعديل الشعار لضمان الظهور */
-        .logo-container {
-            margin-bottom: 15px;
-            min-height: 120px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
         .logo { 
             max-height: 140px; 
             width: auto;
-            transition: 0.3s;
-            display: block;
+            margin-bottom: 15px; 
+            display: inline-block;
         }
         h1 { color: var(--primary-color); font-size: 2.5em; margin: 0; }
         .subtitle { color: #576574; font-size: 1.2em; margin-top: 10px; }
@@ -88,18 +80,14 @@
             box-shadow: 0 10px 25px rgba(37,211,102,0.4); 
             transition: 0.3s; 
         }
+        .whatsapp-float:hover { transform: scale(1.1) rotate(10deg); }
         footer { padding: 40px; background: var(--primary-color); color: white; margin-top: 50px; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-container">
-        <img src="https://raw.githubusercontent.com/vision-lens/Visionss/main/logo.png" 
-             alt="عدسة الرؤية" 
-             class="logo" 
-             onerror="this.src='logo.png'">
-    </div>
+    <img src="https://raw.githubusercontent.com/vision-lens/Visionss/main/logo.png" alt="عدسة الرؤية" class="logo" onerror="this.src='logo.png'">
     <h1>عـدسـة الـرؤيـة</h1>
     <p class="subtitle">تجربة عقارية تفاعلية من قلب الحدث</p>
 </header>
@@ -111,7 +99,7 @@
     </div>
     <div class="card">
         <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400" alt="بالما الخالدية">
-        <div class="card-content"><h3>بـالـمـا الـخـالـديـة</h3><p>📍 الـط_ائـف</p><a href="https://my.matterport.com/show/?m=aDQ5oZbFdsC" target="_blank" class="btn">ابدأ التجربة</a></div>
+        <div class="card-content"><h3>بـالـمـا الـخـالـديـة</h3><p>📍 الـطـائـف</p><a href="https://my.matterport.com/show/?m=aDQ5oZbFdsC" target="_blank" class="btn">ابدأ التجربة</a></div>
     </div>
     <div class="card">
         <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400" alt="هيم بنتهاوس">
