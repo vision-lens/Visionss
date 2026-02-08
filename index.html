@@ -24,14 +24,14 @@
             box-shadow: 0 4px 30px rgba(0,0,0,0.1); 
             border-bottom: 3px solid var(--accent-color); 
         }
-        .logo { 
-            max-height: 140px; 
-            width: auto;
-            margin-bottom: 15px; 
-            display: inline-block;
+        /* تنسيق أيقونة الشعار */
+        .logo-svg {
+            margin-bottom: 15px;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
         }
-        h1 { color: var(--primary-color); font-size: 2.5em; margin: 0; }
-        .subtitle { color: #576574; font-size: 1.2em; margin-top: 10px; }
+        h1 { color: var(--primary-color); font-size: 2.5em; margin: 0; letter-spacing: 1px; }
+        .subtitle { color: #576574; font-size: 1.2em; margin-top: 10px; font-weight: 500; }
+        
         .container { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -53,7 +53,8 @@
         .card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #eee; }
         .card-content { padding: 25px; flex-grow: 1; }
         .card-content h3 { color: var(--primary-color); margin: 0 0 10px 0; font-size: 1.3em; }
-        .card-content p { color: #7f8c8d; margin-bottom: 20px; }
+        .card-content p { color: #7f8c8d; margin-bottom: 20px; font-weight: bold; }
+        
         .btn { 
             display: inline-block; 
             background: linear-gradient(to right, var(--primary-color), #2980b9); 
@@ -65,6 +66,7 @@
             transition: 0.3s; 
         }
         .btn:hover { background: linear-gradient(to right, var(--accent-color), #a68b5a); transform: scale(1.05); }
+        
         .whatsapp-float { 
             position: fixed; 
             bottom: 30px; 
@@ -87,7 +89,15 @@
 <body>
 
 <header>
-    <img src="https://i.ibb.co/3ykS8Y00/Logo.png" alt="عدسة الرؤية" class="logo">
+    <div class="logo-svg">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" stroke="#1a5f7a" stroke-width="6"/>
+            <circle cx="50" cy="50" r="20" stroke="#c0a16b" stroke-width="4"/>
+            <circle cx="50" cy="50" r="8" fill="#1a5f7a"/>
+            <path d="M78 22L88 12" stroke="#c0a16b" stroke-width="8" stroke-linecap="round"/>
+            <path d="M30 30C35 25 42 22 50 22" stroke="#1a5f7a" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+        </svg>
+    </div>
     <h1>عـدسـة الـرؤيـة</h1>
     <p class="subtitle">تجربة عقارية تفاعلية من قلب الحدث</p>
 </header>
@@ -107,7 +117,7 @@
     </div>
     <div class="card">
         <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400" alt="فلل مساكن كرم">
-        <div class="card-content"><h3>فـلـل مـسـاكـن كـرم</h3><p>📍 الـخُ_بـر</p><a href="https://my.matterport.com/show/?m=JiQKz7TexsZ" target="_blank" class="btn">ابدأ التجربة</a></div>
+        <div class="card-content"><h3>فـلـل مـسـاكـن كـرم</h3><p>📍 الـخُـبـر</p><a href="https://my.matterport.com/show/?m=JiQKz7TexsZ" target="_blank" class="btn">ابدأ التجربة</a></div>
     </div>
     <div class="card">
         <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400" alt="سويس اوتيل المقام">
