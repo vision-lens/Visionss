@@ -3,55 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>معرض الجولات الافتراضية الاحترافي</title>
+    <title>معرض الجولات الافتراضية</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; }
-        .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: auto; }
-        
-        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.08); transition: all 0.3s ease; position: relative; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
-
-        /* حاوي الصورة والأيقونة */
-        .image-wrapper { position: relative; width: 100%; height: 250px; overflow: hidden; cursor: pointer; }
-        .card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; image-rendering: -webkit-optimize-contrast; }
-        .card:hover img { transform: scale(1.1); }
-
-        /* تصميم أيقونة التشغيل */
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 65px;
-            height: 65px;
-            background: rgba(0, 123, 255, 0.85);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        }
-
-        /* المثلث داخل الأيقونة */
-        .play-button::after {
-            content: '';
-            border-style: solid;
-            border-width: 12px 0 12px 20px;
-            border-color: transparent transparent transparent #ffffff;
-            margin-left: 5px;
-        }
-
-        .card:hover .play-button { background: #ffffff; transform: translate(-50%, -50%) scale(1.1); }
-        .card:hover .play-button::after { border-color: transparent transparent transparent #007bff; }
-
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f9; margin: 0; padding: 20px; }
+        .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: auto; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 250px; object-fit: cover; image-rendering: -webkit-optimize-contrast; }
         .card-content { padding: 20px; text-align: center; }
-        .card-content h3 { margin: 0 0 8px; color: #2d3436; font-size: 1.3em; font-weight: 700; }
-        .card-content p { color: #636e72; margin-bottom: 18px; font-size: 0.95em; }
-        
-        .btn { display: inline-block; padding: 12px 30px; background-color: #007bff; color: white; text-decoration: none; border-radius: 30px; font-weight: 600; transition: all 0.3s; border: none; }
-        .btn:hover { background-color: #0056b3; box-shadow: 0 4px 12px rgba(0,123,255,0.3); }
+        .card-content h3 { margin: 0 0 10px; color: #333; font-size: 1.4em; }
+        .card-content p { color: #777; margin-bottom: 20px; }
+        .btn { display: inline-block; padding: 10px 25px; background-color: #007bff; color: white; text-decoration: none; border-radius: 25px; transition: background 0.3s; }
+        .btn:hover { background-color: #0056b3; }
     </style>
 </head>
 <body>
@@ -59,10 +22,7 @@
 <div class="container">
 
     <div class="card">
-        <div class="image-wrapper">
-            <img src="https://my.matterport.com/resources/model/eTQoM3XE9NJ/image/VDLwKG3Gt3M" alt="شقة مودرن">
-            <div class="play-button"></div>
-        </div>
+        <img src="https://my.matterport.com/resources/model/eTQoM3XE9NJ/image/VDLwKG3Gt3M" alt="شقة مودرن">
         <div class="card-content">
             <h3>شقة مودرن</h3>
             <p>📍 الـخُـبـر</p>
@@ -71,10 +31,7 @@
     </div>
 
     <div class="card">
-        <div class="image-wrapper">
-            <img src="https://my.matterport.com/resources/model/aDQ5oZbFdsC/image/R26dsiF3X2g" alt="بالما الخالدية">
-            <div class="play-button"></div>
-        </div>
+        <img src="https://my.matterport.com/resources/model/aDQ5oZbFdsC/image/R26dsiF3X2g" alt="بالما الخالدية">
         <div class="card-content">
             <h3>بـالـمـا الـخـالـديـة</h3>
             <p>📍 الـطـائـف</p>
@@ -83,10 +40,7 @@
     </div>
 
     <div class="card">
-        <div class="image-wrapper">
-            <img src="https://my.matterport.com/resources/model/WoNZfETuXdL/image/bf5NdP1TD5D" alt="هيم بنتهاوس">
-            <div class="play-button"></div>
-        </div>
+        <img src="https://my.matterport.com/resources/model/WoNZfETuXdL/image/bf5NdP1TD5D" alt="هيم بنتهاوس">
         <div class="card-content">
             <h3>هـيـم بـنـتـهـاوس</h3>
             <p>📍 أبــهــا</p>
@@ -95,10 +49,7 @@
     </div>
 
     <div class="card">
-        <div class="image-wrapper">
-            <img src="https://my.matterport.com/resources/model/JiQKz7TexsZ/image/9RwsRwwEiHF" alt="فلل مساكن كرم">
-            <div class="play-button"></div>
-        </div>
+        <img src="https://my.matterport.com/resources/model/JiQKz7TexsZ/image/9RwsRwwEiHF" alt="فلل مساكن كرم">
         <div class="card-content">
             <h3>فـلـل مـسـاكـن كـرم</h3>
             <p>📍 الـخُـبـر</p>
@@ -107,10 +58,7 @@
     </div>
 
     <div class="card">
-        <div class="image-wrapper">
-            <img src="https://my.matterport.com/resources/model/wx8LSHQKPzi/image/DBuGZLCkBEu" alt="سويس اوتيل المقام">
-            <div class="play-button"></div>
-        </div>
+        <img src="https://my.matterport.com/resources/model/wx8LSHQKPzi/image/DBuGZLCkBEu" alt="سويس اوتيل المقام">
         <div class="card-content">
             <h3>سويس اوتيل المقام</h3>
             <p>📍 مكة المكرمة</p>
@@ -119,10 +67,7 @@
     </div>
 
     <div class="card">
-        <div class="image-wrapper">
-            <img src="https://my.matterport.com/resources/model/yH6YQvCDUYy/image/2A1YB75jjnj" alt="منازل الوسام">
-            <div class="play-button"></div>
-        </div>
+        <img src="https://my.matterport.com/resources/model/yH6YQvCDUYy/image/2A1YB75jjnj" alt="منازل الوسام">
         <div class="card-content">
             <h3>مـنـازل الـوسـام</h3>
             <p>📍 الـطـائـف</p>
@@ -131,10 +76,7 @@
     </div>
 
     <div class="card">
-        <div class="image-wrapper">
-            <img src="https://my.matterport.com/resources/model/byqxg6hfbk3stmh33070483ea/image/7W7d2CrkzVG" alt="شقة بدون أثاث">
-            <div class="play-button"></div>
-        </div>
+        <img src="https://my.matterport.com/resources/model/byqxg6hfbk3stmh33070483ea/image/7W7d2CrkzVG" alt="شقة بدون أثاث">
         <div class="card-content">
             <h3>شـقـة بـدون أثـاث</h3>
             <p>📍 الـطـائـف</p>
@@ -143,10 +85,7 @@
     </div>
 
     <div class="card">
-        <div class="image-wrapper">
-            <img src="https://my.matterport.com/resources/model/nNbHUR9VcRp/image/ygZafqsgeBa" alt="شقة رسن">
-            <div class="play-button"></div>
-        </div>
+        <img src="https://my.matterport.com/resources/model/nNbHUR9VcRp/image/ygZafqsgeBa" alt="شقة رسن">
         <div class="card-content">
             <h3>شـقـة رسـن</h3>
             <p>📍 الـخُـبـر</p>
@@ -155,10 +94,7 @@
     </div>
 
     <div class="card">
-        <div class="image-wrapper">
-            <img src="https://my.matterport.com/resources/model/wSMX7JZuNQ9/image/843N9yDe5S3" alt="شقة جسر الملك فهد">
-            <div class="play-button"></div>
-        </div>
+        <img src="https://my.matterport.com/resources/model/wSMX7JZuNQ9/image/843N9yDe5S3" alt="شقة جسر الملك فهد">
         <div class="card-content">
             <h3>شـقـة جـسـر الـمـلـك فـهـد</h3>
             <p>📍 الـخُـبـر</p>
@@ -167,10 +103,7 @@
     </div>
 
     <div class="card">
-        <div class="image-wrapper">
-            <img src="https://my.matterport.com/resources/model/21x4mGTirNq/image/ixKmmAXQUQP" alt="معرض مستقبل البناء">
-            <div class="play-button"></div>
-        </div>
+        <img src="https://my.matterport.com/resources/model/21x4mGTirNq/image/ixKmmAXQUQP" alt="معرض مستقبل البناء">
         <div class="card-content">
             <h3>مـعـرض مـسـتـقـبـل الـبـنـاء</h3>
             <p>📍 الـخُـبـر</p>
