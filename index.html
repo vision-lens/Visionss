@@ -3,110 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عدسة الرؤية - الجولات الافتراضية</title>
+    <title>معرض الجولات الافتراضية</title>
     <style>
-        :root { 
-            --primary-color: #1a5f7a; 
-            --accent-color: #c0a16b; 
-            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
-        }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background: var(--bg-gradient); 
-            margin: 0; 
-            text-align: center; 
-            color: #2c3e50; 
-            min-height: 100vh; 
-        }
-        header { 
-            background: rgba(255, 255, 255, 0.9); 
-            padding: 40px 20px; 
-            box-shadow: 0 4px 30px rgba(0,0,0,0.1); 
-            border-bottom: 3px solid var(--accent-color); 
-        }
-        /* تنسيق أيقونة الشعار */
-        .logo-svg {
-            margin-bottom: 15px;
-            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
-        }
-        h1 { color: var(--primary-color); font-size: 2.5em; margin: 0; letter-spacing: 1px; }
-        .subtitle { color: #576574; font-size: 1.2em; margin-top: 10px; font-weight: 500; }
-        
-        .container { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 30px; 
-            padding: 50px 20px; 
-            max-width: 1300px; 
-            margin: 0 auto; 
-        }
-        .card { 
-            background: white; 
-            border-radius: 20px; 
-            overflow: hidden; 
-            transition: 0.4s ease; 
-            display: flex; 
-            flex-direction: column; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
-        }
-        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
-        .card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #eee; }
-        .card-content { padding: 25px; flex-grow: 1; }
-        .card-content h3 { color: var(--primary-color); margin: 0 0 10px 0; font-size: 1.3em; }
-        .card-content p { color: #7f8c8d; margin-bottom: 20px; font-weight: bold; }
-        
-        .btn { 
-            display: inline-block; 
-            background: linear-gradient(to right, var(--primary-color), #2980b9); 
-            color: white; 
-            padding: 12px 25px; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            font-weight: bold; 
-            transition: 0.3s; 
-        }
-        .btn:hover { background: linear-gradient(to right, var(--accent-color), #a68b5a); transform: scale(1.05); }
-        
-        .whatsapp-float { 
-            position: fixed; 
-            bottom: 30px; 
-            left: 30px; 
-            background-color: #25d366; 
-            border-radius: 50%; 
-            width: 65px; 
-            height: 65px; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            z-index: 1000; 
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); 
-            transition: 0.3s; 
-        }
-        .whatsapp-float:hover { transform: scale(1.1) rotate(10deg); }
-        footer { padding: 40px; background: var(--primary-color); color: white; margin-top: 50px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f9; margin: 0; padding: 20px; }
+        .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: auto; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 250px; object-fit: cover; image-rendering: -webkit-optimize-contrast; }
+        .card-content { padding: 20px; text-align: center; }
+        .card-content h3 { margin: 0 0 10px; color: #333; font-size: 1.4em; }
+        .card-content p { color: #777; margin-bottom: 20px; }
+        .btn { display: inline-block; padding: 10px 25px; background-color: #007bff; color: white; text-decoration: none; border-radius: 25px; transition: background 0.3s; }
+        .btn:hover { background-color: #0056b3; }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo-svg">
-        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="40" stroke="#1a5f7a" stroke-width="6"/>
-            <circle cx="50" cy="50" r="20" stroke="#c0a16b" stroke-width="4"/>
-            <circle cx="50" cy="50" r="8" fill="#1a5f7a"/>
-            <path d="M78 22L88 12" stroke="#c0a16b" stroke-width="8" stroke-linecap="round"/>
-            <path d="M30 30C35 25 42 22 50 22" stroke="#1a5f7a" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-        </svg>
-    </div>
-    <h1>عـدسـة الـرؤيـة</h1>
-    <p class="subtitle">تجربة عقارية تفاعلية من قلب الحدث</p>
-</header>
+<div class="container">
 
-          <div class="card">
-        <img src="https://my.matterport.com/resources/model/eTQoM3XE9NJ/image/VDLwKG3Gt3M" 
-             alt="شقة مودرن - جودة أصلية" 
-             style="width: 100%; height: 250px; object-fit: cover; image-rendering: auto;">
-        
+    <div class="card">
+        <img src="https://my.matterport.com/resources/model/eTQoM3XE9NJ/image/VDLwKG3Gt3M" alt="شقة مودرن">
         <div class="card-content">
             <h3>شقة مودرن</h3>
             <p>📍 الـخُـبـر</p>
@@ -114,14 +30,8 @@
         </div>
     </div>
 
-
-
-
-        <div class="card">
-        <img src="https://my.matterport.com/resources/model/aDQ5oZbFdsC/image/R26dsiF3X2g" 
-             alt="بالما الخالدية - جودة أصلية" 
-             style="width: 100%; height: 250px; object-fit: cover;">
-        
+    <div class="card">
+        <img src="https://my.matterport.com/resources/model/aDQ5oZbFdsC/image/R26dsiF3X2g" alt="بالما الخالدية">
         <div class="card-content">
             <h3>بـالـمـا الـخـالـديـة</h3>
             <p>📍 الـطـائـف</p>
@@ -129,11 +39,8 @@
         </div>
     </div>
 
-        <div class="card">
-        <img src="https://my.matterport.com/resources/model/WoNZfETuXdL/image/bf5NdP1TD5D" 
-             alt="هيم بنتهاوس - جودة أصلية" 
-             style="width: 100%; height: 250px; object-fit: cover;">
-        
+    <div class="card">
+        <img src="https://my.matterport.com/resources/model/WoNZfETuXdL/image/bf5NdP1TD5D" alt="هيم بنتهاوس">
         <div class="card-content">
             <h3>هـيـم بـنـتـهـاوس</h3>
             <p>📍 أبــهــا</p>
@@ -141,11 +48,8 @@
         </div>
     </div>
 
-        <div class="card">
-        <img src="https://my.matterport.com/resources/model/JiQKz7TexsZ/image/9RwsRwwEiHF" 
-             alt="فلل مساكن كرم - جودة أصلية" 
-             style="width: 100%; height: 250px; object-fit: cover;">
-        
+    <div class="card">
+        <img src="https://my.matterport.com/resources/model/JiQKz7TexsZ/image/9RwsRwwEiHF" alt="فلل مساكن كرم">
         <div class="card-content">
             <h3>فـلـل مـسـاكـن كـرم</h3>
             <p>📍 الـخُـبـر</p>
@@ -153,11 +57,8 @@
         </div>
     </div>
 
-      <div class="card">
-        <img src="https://my.matterport.com/resources/model/wx8LSHQKPzi/image/DBuGZLCkBEu" 
-             alt="سويس اوتيل المقام - جودة أصلية" 
-             style="width: 100%; height: 250px; object-fit: cover;">
-        
+    <div class="card">
+        <img src="https://my.matterport.com/resources/model/wx8LSHQKPzi/image/DBuGZLCkBEu" alt="سويس اوتيل المقام">
         <div class="card-content">
             <h3>سويس اوتيل المقام</h3>
             <p>📍 مكة المكرمة</p>
@@ -165,11 +66,8 @@
         </div>
     </div>
 
-        <div class="card">
-        <img src="https://my.matterport.com/resources/model/yH6YQvCDUYy/image/2A1YB75jjnj" 
-             alt="منازل الوسام - جودة أصلية" 
-             style="width: 100%; height: 250px; object-fit: cover;">
-        
+    <div class="card">
+        <img src="https://my.matterport.com/resources/model/yH6YQvCDUYy/image/2A1YB75jjnj" alt="منازل الوسام">
         <div class="card-content">
             <h3>مـنـازل الـوسـام</h3>
             <p>📍 الـطـائـف</p>
@@ -177,11 +75,8 @@
         </div>
     </div>
 
-            <div class="card">
-        <img src="https://my.matterport.com/resources/model/byqxg6hfbk3stmh33070483ea/image/7W7d2CrkzVG" 
-             alt="شقة بدون أثاث" 
-             style="width: 100%; height: 250px; object-fit: cover;">
-        
+    <div class="card">
+        <img src="https://my.matterport.com/resources/model/byqxg6hfbk3stmh33070483ea/image/7W7d2CrkzVG" alt="شقة بدون أثاث">
         <div class="card-content">
             <h3>شـقـة بـدون أثـاث</h3>
             <p>📍 الـطـائـف</p>
@@ -189,12 +84,8 @@
         </div>
     </div>
 
-
-        <div class="card">
-        <img src="https://my.matterport.com/resources/model/nNbHUR9VcRp/image/ygZafqsgeBa" 
-             alt="شقة رسن - جودة أصلية" 
-             style="width: 100%; height: 250px; object-fit: cover;">
-        
+    <div class="card">
+        <img src="https://my.matterport.com/resources/model/nNbHUR9VcRp/image/ygZafqsgeBa" alt="شقة رسن">
         <div class="card-content">
             <h3>شـقـة رسـن</h3>
             <p>📍 الـخُـبـر</p>
@@ -202,11 +93,8 @@
         </div>
     </div>
 
-        <div class="card">
-        <img src="https://my.matterport.com/resources/model/wSMX7JZuNQ9/image/843N9yDe5S3" 
-             alt="شقة جسر الملك فهد - جودة أصلية" 
-             style="width: 100%; height: 250px; object-fit: cover;">
-        
+    <div class="card">
+        <img src="https://my.matterport.com/resources/model/wSMX7JZuNQ9/image/843N9yDe5S3" alt="شقة جسر الملك فهد">
         <div class="card-content">
             <h3>شـقـة جـسـر الـمـلـك فـهـد</h3>
             <p>📍 الـخُـبـر</p>
@@ -215,16 +103,15 @@
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400" alt="مستقبل البناء">
-        <div class="card-content"><h3>معرض مستقبل البناء</h3><p>📍 الطائف</p><a href="https://my.matterport.com/show/?m=21x4mGTirNq" target="_blank" class="btn">ابدأ التجربة</a></div>
+        <img src="https://my.matterport.com/resources/model/21x4mGTirNq/image/ixKmmAXQUQP" alt="معرض مستقبل البناء">
+        <div class="card-content">
+            <h3>مـعـرض مـسـتـقـبـل الـبـنـاء</h3>
+            <p>📍 الـخُـبـر</p>
+            <a href="https://my.matterport.com/show/?m=21x4mGTirNq" target="_blank" class="btn">ابدأ التجربة</a>
+        </div>
     </div>
+
 </div>
-
-<a href="https://wa.me/966531565005" class="whatsapp-float" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WhatsApp">
-</a>
-
-<footer><p>عدسة الرؤية &copy; 2026</p></footer>
 
 </body>
 </html>
